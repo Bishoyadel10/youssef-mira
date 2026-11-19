@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f3ece1">
+<title>Youssef &amp; Mira Wedding</title>
+<script>document.documentElement.classList.add('js','locked');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Jost:wght@300;400;500&family=Pinyon+Script&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<noscript><style>.gate{display:none !important}</style></noscript>
+<style>
+/* Plan: an ivory letter opened from a sage wax-sealed envelope; one full-bleed photo per beat, quiet type, hairline gold. Single light theme by choice. */
+:root{
+  --paper:#f3ece1;
+  --paper-deep:#e2d3be;
+  --ink:#2b2621;
+  --sage:#4f5d45;
+  --gold:#8a6a3a;
+  --gold-light:#e2c794;
+  --display:'Bodoni Moda','Didot','Bodoni 72',Georgia,serif;
+  --script:'Pinyon Script','Snell Roundhand','Apple Chancery',cursive;
+  --body:'Jost','Helvetica Neue',Arial,sans-serif;
+  --arabic:'Amiri','Noto Naskh Arabic','Times New Roman',serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{background:var(--paper)}
+html.js.locked body{overflow:hidden}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img{max-width:100%;display:block}
+a:focus-visible,button:focus-visible{outline:2px solid var(--gold-light);outline-offset:4px}
+h1,h2,h3,p{margin:0}
+h2{text-wrap:balance}
+
+/* Envelope gate */
+.gate{position:fixed;inset:0;z-index:50;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:30px;border:0;margin:0;padding:24px;background:var(--paper);color:var(--ink);cursor:pointer;font:inherit;width:100%;transition:opacity .9s ease .75s,visibility 0s linear 1.7s}
+.gate.open{opacity:0;visibility:hidden;pointer-events:none}
+.envelope{position:relative;width:min(88vw,520px);aspect-ratio:3/2;perspective:1400px;filter:drop-shadow(0 18px 26px rgba(70,50,25,.22));transition:transform 1.3s ease .45s}
+.gate.open .envelope{transform:scale(1.1) translateY(-4%)}
+.env-back{position:absolute;inset:0;background:var(--paper-deep);border-radius:6px}
+.env-pocket{position:absolute;inset:0;border-radius:6px;background:#ebdfcc;clip-path:polygon(0 0,50% 55%,100% 0,100% 100%,0 100%)}
+.env-to{position:absolute;left:0;right:0;bottom:11%;text-align:center;font:400 clamp(22px,6vw,34px)/1 var(--script);color:#6b5a44;z-index:2}
+.env-flap{position:absolute;left:0;top:0;width:100%;height:58%;background:#f7efe3;clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top center;z-index:3;border-radius:6px 6px 0 0}
+.gate.open .env-flap{animation:flap .9s ease forwards}
+@keyframes flap{0%{transform:rotateX(0);z-index:3}50%{z-index:3}51%{z-index:0}100%{transform:rotateX(180deg);z-index:0}}
+.seal{position:absolute;left:50%;top:58%;width:86px;height:86px;margin:-43px 0 0 -43px;border-radius:50%;z-index:4;display:grid;place-items:center;background:radial-gradient(circle at 34% 30%,#8a9a7b,#4f5d45 72%);box-shadow:0 5px 12px rgba(0,0,0,.28),inset 0 0 0 5px rgba(255,255,255,.07),inset 0 0 0 9px rgba(0,0,0,.07);font:400 31px/1 var(--script);color:#f1e9d4;transition:opacity .3s ease}
+.gate.open .seal{opacity:0}
+.gate-hint{font:400 clamp(28px,7.5vw,40px)/1 var(--script);color:var(--gold);animation:pulse 2.6s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.5}}
+
+/* Cover */
+.cover{position:relative;isolation:isolate;overflow:hidden;min-height:clamp(560px,100svh,920px);display:grid;grid-template-rows:auto 1fr auto;color:#fff}
+.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.cover .bg{object-position:50% 18%}
+.cover::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(24,17,10,.5) 0%,rgba(24,17,10,0) 26%,rgba(24,17,10,.08) 48%,rgba(24,17,10,.8) 100%)}
+.eyebrow{font:400 12px/1 var(--body);letter-spacing:.5em;text-transform:uppercase}
+.cover-top{padding:30px 20px 0;text-align:center}
+.names{align-self:end;padding:0 16px;display:flex;flex-direction:column;align-items:center}
+.names .n{font:400 clamp(44px,14.5vw,128px)/.95 var(--display);letter-spacing:.05em;text-transform:uppercase}
+.names .amp{font:400 clamp(50px,13vw,92px)/1 var(--script);color:var(--gold-light);margin:2px 0}
+.cover-foot{padding:22px 20px 36px;display:flex;flex-direction:column;align-items:center;gap:20px}
+.cover-date{font:300 14px/1.4 var(--body);letter-spacing:.38em;text-transform:uppercase;text-align:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:46px;padding:0 28px;border:1px solid currentColor;border-radius:999px;color:inherit;text-decoration:none;background:transparent;font:400 13px/1 var(--body);letter-spacing:.3em;text-transform:uppercase;cursor:pointer;transition:background .25s ease,color .25s ease}
+.btn:hover{background:rgba(255,255,255,.14)}
+.opened .rise{animation:rise 1.1s cubic-bezier(.2,.7,.2,1) both}
+.opened .rise.d1{animation-delay:.9s}.opened .rise.d2{animation-delay:1.05s}.opened .rise.d3{animation-delay:1.2s}.opened .rise.d4{animation-delay:1.4s}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+
+/* Letter */
+.letter{max-width:600px;margin:0 auto;padding:84px 24px 92px;display:flex;flex-direction:column;align-items:center;gap:26px;text-align:center}
+.arch{width:min(74vw,320px);aspect-ratio:3/4;border-radius:999px 999px 0 0;overflow:hidden;outline:1px solid var(--gold);outline-offset:9px;margin:10px 0 18px}
+.arch img{width:100%;height:100%;object-fit:cover;object-position:50% 22%}
+.script{font-family:var(--script);font-weight:400}
+.letter .open-line{font-size:clamp(40px,11vw,58px);line-height:1.1;color:var(--sage)}
+.lede{font:italic 400 clamp(21px,5.4vw,26px)/1.5 var(--display);max-width:30ch}
+.rule{display:flex;align-items:center;gap:14px;color:var(--gold)}
+.rule span{width:64px;height:1px;background:currentColor}
+.rule i{width:7px;height:7px;background:currentColor;transform:rotate(45deg)}
+.couple{display:flex;flex-direction:column;align-items:center;gap:4px}
+.couple .who{font:400 clamp(38px,10vw,56px)/1.1 var(--display);letter-spacing:.02em}
+.couple .what{font-size:clamp(34px,9vw,48px);line-height:1.2;color:var(--gold)}
+.body-text{font:300 clamp(17px,4.4vw,19px)/1.8 var(--body);max-width:34ch}
+.sign{display:flex;flex-direction:column;align-items:center;gap:2px}
+.sign .with{font-size:34px;line-height:1.2;color:var(--sage)}
+.sign .by{font:400 22px/1.3 var(--display);letter-spacing:.08em}
+
+/* Photo sections */
+.photo-sec{position:relative;isolation:isolate;overflow:hidden;color:#fff;text-align:center}
+.photo-sec::after{content:"";position:absolute;inset:0;z-index:-1}
+.count{padding:96px 18px}
+.count .bg{object-position:50% 40%;filter:blur(3px);transform:scale(1.06)}
+.count::after{background:rgba(30,38,26,.66)}
+.count .script{font-size:clamp(44px,12vw,68px);line-height:1.1;color:var(--gold-light)}
+.big-date{margin-top:12px;font:400 clamp(20px,5.6vw,30px)/1.35 var(--display);letter-spacing:.08em;text-transform:uppercase}
+.tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;max-width:540px;margin:38px auto 0}
+.tile{display:flex;flex-direction:column;align-items:center;gap:10px;padding:20px 4px 18px;border:1px solid rgba(255,255,255,.5)}
+.num{font:400 clamp(30px,9vw,54px)/1 var(--display);font-variant-numeric:tabular-nums lining-nums}
+.unit{font:400 11px/1 var(--body);letter-spacing:.24em;text-transform:uppercase}
+.today{margin-top:30px;font:italic 400 26px/1.4 var(--display)}
+
+.ceremony{background:var(--sage);color:var(--paper);padding:88px 24px 96px;text-align:center}
+.ceremony-in{max-width:520px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:30px}
+.ceremony h2{font:400 clamp(34px,9.4vw,56px)/1.1 var(--display);letter-spacing:.08em;text-transform:uppercase}
+.info{display:flex;flex-direction:column;align-items:center;gap:10px}
+.info-label{display:flex;align-items:center;gap:10px;font:500 13px/1 var(--body);letter-spacing:.3em;text-transform:uppercase;color:var(--gold-light)}
+.info-val{font:400 clamp(22px,5.8vw,28px)/1.4 var(--display)}
+.ar{font:400 clamp(22px,6vw,28px)/1.6 var(--arabic)}
+.ceremony .btn:hover{background:rgba(243,236,225,.14)}
+
+.verse{padding:104px 24px}
+.verse .bg{object-position:50% 25%;filter:blur(2px);transform:scale(1.05)}
+.verse::after{background:rgba(22,17,12,.64)}
+.verse-in{max-width:560px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:16px}
+.verse .ar-big{font:400 clamp(30px,8.4vw,44px)/1.6 var(--arabic)}
+.verse .en{font:italic 400 clamp(20px,5.2vw,26px)/1.5 var(--display)}
+.ref{font:400 12px/1 var(--body);letter-spacing:.32em;text-transform:uppercase;color:var(--gold-light)}
+
+.std{min-height:clamp(540px,94svh,860px);display:flex;flex-direction:column;justify-content:flex-end;align-items:center;padding:0 18px 64px}
+.std .bg{object-position:50% 30%}
+.std::after{background:linear-gradient(180deg,rgba(20,14,10,0) 40%,rgba(20,14,10,.82) 100%)}
+.std .script{font-size:clamp(56px,16vw,104px);line-height:1}
+.std .d{margin-top:10px;font:400 clamp(34px,10vw,66px)/1.1 var(--display);letter-spacing:.12em;font-variant-numeric:lining-nums}
+
+footer{padding:44px 20px 52px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:8px}
+footer .script{font-size:36px;line-height:1.2;color:var(--sage)}
+footer small{font:400 12px/1.4 var(--body);letter-spacing:.32em;text-transform:uppercase;color:#5d5248}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none !important;transition-duration:.01ms !important;transition-delay:0s !important;scroll-behavior:auto !important}
+}
+</style>
+</head>
+<body>
+
+<button class="gate" id="gate" type="button" aria-label="Open the invitation">
+  <span class="envelope" aria-hidden="true">
+    <span class="env-back"></span>
+    <span class="env-pocket"></span>
+    <span class="env-to">To our dearest guests</span>
+    <span class="env-flap"></span>
+    <span class="seal">Y&amp;M</span>
+  </span>
+  <span class="gate-hint">Tap to open…</span>
+</button>
+
+<header class="cover" id="top">
+  <img class="bg" src="img/c5.jpg" alt="Youssef and Mira at golden hour" fetchpriority="high">
+  <div class="cover-top"><p class="eyebrow rise d1">The wedding of</p></div>
+  <h1 class="names" aria-label="Youssef and Mira">
+    <span class="n rise d2">Youssef</span>
+    <span class="amp rise d3" aria-hidden="true">&amp;</span>
+    <span class="n rise d3">Mira</span>
+  </h1>
+  <div class="cover-foot rise d4">
+    <p class="cover-date">Thursday · 20 May 2027</p>
+    <a class="btn" href="#letter" id="continue">Continue <span aria-hidden="true">→</span></a>
+  </div>
+</header>
+
+<main>
+  <section class="letter" id="letter" aria-label="Invitation">
+    <div class="arch"><img src="img/c3.jpg" alt="Youssef and Mira in the garden" decoding="async"></div>
+    <p class="script open-line">With joyful hearts,</p>
+    <p class="lede">we invite you to celebrate the beginning of our forever.</p>
+    <div class="rule" aria-hidden="true"><span></span><i></i><span></span></div>
+    <div class="couple">
+      <p class="who">Youssef &amp; Mira</p>
+      <p class="script what">are getting married!</p>
+    </div>
+    <p class="body-text">Come celebrate with us, share our happiness, and be part of the beautiful beginning of our forever.</p>
+    <p class="lede">We can’t wait to celebrate with you!</p>
+    <div class="sign">
+      <p class="script with">With love,</p>
+      <p class="by">Youssef &amp; Mira</p>
+    </div>
+  </section>
+
+  <section class="photo-sec count" aria-labelledby="bigday">
+    <img class="bg" src="img/c2.jpg" alt="" decoding="async">
+    <h2 class="script" id="bigday">The Big Day</h2>
+    <p class="big-date">Thursday, 20<sup>th</sup> May 2027</p>
+    <div class="tiles" id="tiles" role="timer" aria-live="off" aria-label="Time left until the wedding">
+      <div class="tile"><span class="num" id="cd-d">182</span><span class="unit">Days</span></div>
+      <div class="tile"><span class="num" id="cd-h">00</span><span class="unit">Hours</span></div>
+      <div class="tile"><span class="num" id="cd-m">00</span><span class="unit">Minutes</span></div>
+      <div class="tile"><span class="num" id="cd-s">00</span><span class="unit">Seconds</span></div>
+    </div>
+    <p class="today" id="today" hidden>Today we celebrate.</p>
+  </section>
+
+  <section class="ceremony" aria-labelledby="ceremony-h">
+    <div class="ceremony-in">
+      <svg aria-hidden="true" viewBox="0 0 120 104" width="96" height="84" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 6v18M53 12h14"/>
+        <path d="M38 52a22 22 0 0 1 44 0"/>
+        <path d="M30 52h60v44H30z"/>
+        <path d="M52 96V80a8 8 0 0 1 16 0v16"/>
+        <path d="M14 62h16v34H14zM90 62h16v34H90z"/>
+        <path d="M22 54v8M98 54v8M18 58h8M94 58h8"/>
+        <path d="M6 96h108"/>
+      </svg>
+      <h2 id="ceremony-h">Ceremony</h2>
+      <div class="info">
+        <p class="info-label">
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+          Location
+        </p>
+        <p class="info-val">Church of Archangel Michael, Sheraton</p>
+        <p class="ar" lang="ar" dir="rtl">كنيسة الملاك ميخائيل، شيراتون</p>
+      </div>
+      <div class="info">
+        <p class="info-label">
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          Date &amp; time
+        </p>
+        <p class="info-val">Thursday, 20 May 2027 · 5:00 PM</p>
+      </div>
+      <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Church%20of%20Archangel%20Michael%20Sheraton%20Cairo" target="_blank" rel="noopener">Open in Maps</a>
+    </div>
+  </section>
+
+  <section class="photo-sec verse" aria-label="Verse">
+    <img class="bg" src="img/c1.jpg" alt="" decoding="async">
+    <div class="verse-in">
+      <p class="ar-big" lang="ar" dir="rtl">إذًا ليسا بعد اثنين بل جسد واحد</p>
+      <p class="en">So they are no longer two, but one.</p>
+      <p class="ref">Matthew 19:6</p>
+    </div>
+  </section>
+
+  <section class="photo-sec std" aria-label="Save the date">
+    <img class="bg" src="img/c4.jpg" alt="Youssef and Mira" decoding="async">
+    <p class="script">Save the date</p>
+    <p class="d">20.05.2027</p>
+  </section>
+</main>
+
+<footer>
+  <p class="script">Youssef &amp; Mira</p>
+  <small>20 May 2027 · Sheraton, Cairo</small>
+</footer>
+
+<script>
+(function(){
+  var root=document.documentElement, gate=document.getElementById('gate');
+  function openGate(){
+    if(gate.classList.contains('open')) return;
+    gate.classList.add('open');
+    root.classList.remove('locked');
+    document.body.classList.add('opened');
+    setTimeout(function(){ gate.hidden=true; var c=document.getElementById('continue'); if(c) c.focus({preventScroll:true}); },1750);
+  }
+  gate.addEventListener('click',openGate);
+
+  document.getElementById('continue').addEventListener('click',function(e){
+    var t=document.getElementById('letter');
+    if(t && t.scrollIntoView){ e.preventDefault(); t.scrollIntoView({behavior:'smooth',block:'start'}); }
+  });
+
+  var target=new Date(2027,4,20,17,0,0).getTime();
+  var d=document.getElementById('cd-d'),h=document.getElementById('cd-h'),m=document.getElementById('cd-m'),s=document.getElementById('cd-s');
+  function pad(n){return n<10?'0'+n:String(n);}
+  function tick(){
+    var diff=target-Date.now();
+    if(diff<=0){document.getElementById('tiles').hidden=true;document.getElementById('today').hidden=false;return false;}
+    var t=Math.floor(diff/1000);
+    d.textContent=Math.floor(t/86400);
+    h.textContent=pad(Math.floor(t%86400/3600));
+    m.textContent=pad(Math.floor(t%3600/60));
+    s.textContent=pad(t%60);
+    return true;
+  }
+  if(tick()){var iv=setInterval(function(){ if(!tick()) clearInterval(iv); },1000);}
+})();
+</script>
+</body>
+</html>
